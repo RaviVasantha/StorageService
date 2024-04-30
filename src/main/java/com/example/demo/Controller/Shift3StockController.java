@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Entity.Shift3Stock;
 import com.example.demo.Services.Shift3StockServices;
+import jakarta.transaction.Transactional;
 
 @RestController
 @RequestMapping(value="/Shift3")
+@Transactional	
 public class Shift3StockController {
 	@Autowired
 	Shift3StockServices stockService;
