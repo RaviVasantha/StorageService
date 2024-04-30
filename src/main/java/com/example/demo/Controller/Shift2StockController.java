@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.Entity.Shift2Stock;
 import com.example.demo.Services.Shift2StockServices;
-
+import jakarta.transaction.Transactional;
 @RestController
 @RequestMapping(value="/Shift2")
+@Transactional	
 public class Shift2StockController {
 	@Autowired
 	Shift2StockServices stockService;
