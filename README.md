@@ -20,11 +20,11 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE PROCEDURE GetStock_Shift1(material VARCHAR(50))
+CREATE PROCEDURE GetStock_Shift1(material_t VARCHAR(50))
 
 BEGIN
 
-    SELECT * FROM Shift1Stock WHERE material = material;
+    SELECT * FROM Shift1Stock WHERE material = material_t;
     
 END$$
 
