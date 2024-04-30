@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,7 +22,7 @@ public class Shift2StockController {
 		stockService.addstock(material, quantity);
 	}
 	@GetMapping(value="/stock")
-	public List<Shift2Stock> getStock(@PathVariable String material) {
+	public List<Shift2Stock> getStock(@RequestParam String material) {
 		return stockService.getStock(material);
 	}
 
